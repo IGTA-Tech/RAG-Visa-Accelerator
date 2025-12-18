@@ -16,7 +16,7 @@ company:
   primary_domain: "innovativeautomations.dev"
   assessment_tool: "https://www.aivisaevaluations.online"
   crm: "Go High Level (GHL)"
-  
+
   brands:
     innovative_automations:
       name: "Innovative Automations"
@@ -25,7 +25,7 @@ company:
       focus: "Tech/AI professionals, software engineers, AI developers"
       voice: "Technical, innovative, future-focused"
       pricing_tier: "base"
-      
+
     pentos_partners:
       name: "Pentos Partners"
       domain: "pentospartners.com"
@@ -33,14 +33,14 @@ company:
       voice: "Premium, sophisticated, exclusive"
       pricing_tier: "premium"
       pricing_multiplier: 1.33  # ~$16K-$20K range
-      
+
     aventus_visa_agents:
       name: "Aventus Visa Agents"
       domain: "aventusvisaagents.com"
       focus: "Agent-based flexibility, H-1B affected professionals"
       voice: "Professional, supportive, solution-oriented"
       pricing_tier: "base"
-      
+
     sherrod_sports_visas:
       name: "Sherrod Sports Visas"
       domain: "sherrodsportsvisas.com"
@@ -56,22 +56,22 @@ statistics:
   approval_rate_context: "when we file"
   successful_approvals: "500+"
   successful_approvals_context: "O-1 and P-1 combined"
-  
+
   h1b_rejections_2024: "670,000"
   h1b_rejection_rate_2024: "85%"
   h1b_selection_rate_2024: "14%"
   h1b_minimum_salary_new: "$100,000"
-  
+
   community_size: "500+"
   community_context: "professionals in program"
-  
+
   average_alumni_salary: "$275,000"
   average_employers_per_graduate: "3.2"
   average_time_to_approval: "4.2 months"
-  
+
   o1_visa_initial_term: "3 years"
   o1_visa_renewal: "Unlimited 3-year increments"
-  
+
   cohort_size_monthly: "30-50"
   cohort_size_elite: "smaller for personalized support"
 
@@ -86,17 +86,17 @@ programs:
     url_primary: "/o1-ready-filing/"
     url_alternate: "/ai-ml-talent/o1-ready-filing/"
     page_title: "O-1 Ready Filing Program | Immediate Agent-Based Petition"
-    
+
     # Target Audience
     target_audience: "Candidates who already qualify for O-1"
     assessment_score_required: "35%+"
     criteria_required: "3+ of 8 O-1 criteria documented"
-    
+
     # Core Details
     filing_included: true
     timeline_to_file: "30 days"
     assessment_turnaround: "48 hours"
-    
+
     # Pricing
     pricing:
       regular:
@@ -104,20 +104,20 @@ programs:
         display: "$11,000"
         uscis_timeline: "4-6 months"
         includes_premium_processing: false
-        
+
       premium:
         price: 15000
         display: "$15,000"
         uscis_timeline: "15 calendar days"
         includes_premium_processing: true
         uscis_premium_fee_included: 2805
-        
+
       payment_plan:
         available: true
         minimum_monthly: 2000
         display: "$2,000/month minimum"
         condition: "Must be paid in full before filing"
-    
+
     # What's Included
     includes:
       - "Complete petition preparation"
@@ -129,13 +129,13 @@ programs:
       - "Employer network access"
       - "Business ownership rights"
       - "One RFE response included"
-      
+
     # If Denied
     refile:
       fee: 1500
       display: "$1,500"
       additional: "plus USCIS filing fees"
-      
+
     # Benefits (Agent-Based)
     agent_benefits:
       - "Work for multiple employers simultaneously"
@@ -155,39 +155,39 @@ programs:
     tier: "standard"
     url: "/o1-profile-building/"
     tagline: "Self-Directed Evidence Building"
-    
+
     # Target Audience
     target_audience: "Self-motivated professionals, flexible timeline"
     assessment_score: "0-34%"
     ideal_timeline: "12+ months to filing"
-    
+
     # Core Details
     filing_included: false
     program_length: "12 months"
     program_length_display: "12-month program"
     minimum_commitment: "12 months"
     time_commitment_weekly: "8-12 hours"
-    
+
     # Pricing
     pricing:
       monthly:
         price: 800
         display: "$800/month"
         total_annual: 9600
-        
+
       quarterly:
         price: 2400
         display: "$2,400 every 3 months"
         equivalent_monthly: 800
         savings: 0
         savings_display: "Same as monthly"
-        
+
       annual_prepay:
         price: 8000
         display: "$8,000 one-time"
         savings: 1600
         savings_display: "Save $1,600"
-        
+
     # What's Included
     includes:
       - "Evidence building framework"
@@ -208,7 +208,7 @@ programs:
       - "Peer review of evidence"
       - "Weekly Q&A sessions"
       - "Media/PR templates and guidance"
-      
+
     # What's NOT Included
     excludes:
       - "O-1 petition filing"
@@ -219,7 +219,7 @@ programs:
       - "Priority project placement"
       - "Deal Memo Portal access"
       - "Monthly readiness evaluations"
-      
+
     # Ideal For
     ideal_for:
       - "Self-motivated professionals who thrive with structure"
@@ -237,39 +237,39 @@ programs:
     tier: "elite"
     url: "/o1-profile-building/"
     tagline: "Guided Evidence Building with Expert Support"
-    
+
     # Target Audience
     target_audience: "Professionals wanting expert guidance"
     assessment_score: "0-34%"
     ideal_timeline: "6-12 months"
-    
+
     # Core Details
     filing_included: false
     program_length: "12 months"
     program_length_display: "12-month commitment"
     minimum_commitment: "12 months"
     time_commitment_weekly: "8-12 hours"
-    
+
     # Pricing
     pricing:
       monthly:
         price: 1400
         display: "$1,400/month"
         total_annual: 16800
-        
+
       quarterly:
         price: 4200
         display: "$4,200 every 3 months"
         equivalent_monthly: 1400
         savings: 0
         savings_display: "Same as monthly"
-        
+
       annual_prepay:
         price: 15000
         display: "$15,000 one-time"
         savings: 1800
         savings_display: "Save $1,800"
-        
+
     # What's Included (Everything in Profile Builder PLUS)
     includes_all_from: "profile_builder"
     additional_includes:
@@ -296,7 +296,7 @@ programs:
       - "Private communication channels"
       - "Comprehensive document review"
       - "Advisor-guided milestone tracking"
-      
+
     # Ideal For
     ideal_for:
       - "Professionals who want expert guidance"
@@ -313,11 +313,11 @@ programs:
     short_name: "Filing Accelerator"
     url: "/o1-filing-accelerator/"
     tagline: "Build Your O-1 Profile AND File Your Visa"
-    
+
     # Target Audience
     target_audience: "Candidates wanting complete solution"
     assessment_score: "0-34%"
-    
+
     # Core Details
     filing_included: true
     filings_included: 2
@@ -327,7 +327,7 @@ programs:
     typical_filing_window: "months 4-6"
     second_filing_window: "months 9-12"
     time_commitment_weekly: "13-17 hours"
-    
+
     # Pricing
     pricing:
       monthly:
@@ -336,7 +336,7 @@ programs:
         months: 12
         total: 24000
         total_display: "$24,000"
-        
+
       quarterly:
         price: 5500
         display: "$5,500 every 3 months"
@@ -345,25 +345,25 @@ programs:
         total_display: "$22,000"
         savings: 2000
         savings_display: "Save $2,000"
-        
+
       annual_prepay:
         price: 20000
         display: "$20,000 one-time"
         savings: 4000
         savings_display: "Save $4,000 (17% discount)"
-        
+
     # USCIS Fees (Paid Separately)
     uscis_fees:
       filing_fee:
         price: 1055
         display: "$1,055"
         context: "per filing (government fee)"
-        
+
       premium_processing:
         price: 2805
         display: "$2,805"
         context: "per filing (optional, for 15-day decision)"
-        
+
     # What's Included (ALL-INCLUSIVE)
     includes:
       - "Full year of profile building support"
@@ -383,18 +383,18 @@ programs:
       - "Monthly O-1 readiness evaluations"
       - "Dedicated success advisor"
       - "RFE response handling"
-      
+
     # If Both Filings Fail
     if_both_fail:
       continued_rate: 1000
       display: "$1,000/month"
       context: "50% discount until approved"
-      
+
     # Two Filings Explained
     two_filings_benefit:
       first_filing: "As early as month 3-6 (when ready)"
       second_filing: "Months 9-12 (if needed)"
-      if_approved_first: 
+      if_approved_first:
         - "Save for O-1 renewal (3 years later)"
         - "Transfer to colleague/referral (with approval)"
         - "Apply toward future immigration planning"
@@ -407,7 +407,7 @@ programs:
     name: "Agent-Petitioner Services"
     url: "/agent-petitioner-services/"
     target_audience: "Candidates with own immigration attorney"
-    
+
     # Options
     options:
       petitioner_only:
@@ -426,7 +426,7 @@ programs:
           - "Petition letter and legal arguments"
           - "Form I-129 completion"
           - "Your own immigration attorney"
-          
+
       complete_filing:
         name: "Complete Filing (Petitioner + Preparation)"
         price: 10000
@@ -440,16 +440,16 @@ upgrades:
   profile_builder_to_ready_filing:
     credit: 2000
     display: "$2,000 off"
-    
+
   profile_builder_to_filing_accelerator:
     credit: 2000
     display: "$2,000 off"
     additional: "Plus credit existing payments"
-    
+
   profile_builder_to_elite:
     credit: "existing_payments"
     display: "Credit payments toward new tier"
-    
+
   mid_program_to_filing_accelerator:
     credit: "existing_payments"
     display: "Credit existing payments"
@@ -460,7 +460,7 @@ upgrades:
 assessment:
   tool_url: "https://www.aivisaevaluations.online"
   crm_integration: "Go High Level (GHL)"
-  
+
   routing_rules:
     - score_range: "0-34%"
       label: "Needs Evidence Building"
@@ -469,7 +469,7 @@ assessment:
         - "profile_builder_elite"
         - "filing_accelerator"
       recommendation: "Profile building programs"
-      
+
     - score_range: "35%+"
       label: "Ready to File"
       route_to:
@@ -482,43 +482,43 @@ assessment:
 o1_criteria:
   requirement: "3 of 8 criteria required"
   recommendation: "Build 5-6 for strong application"
-  
+
   criteria_list:
     - id: 1
       name: "Awards & Recognition"
       uscis_description: "Nationally or internationally recognized prizes or awards for excellence"
       typical_timeline: "3-6 months to first award"
-      
+
     - id: 2
       name: "Membership in Elite Organizations"
       uscis_description: "Membership in associations requiring outstanding achievements for admission"
       typical_timeline: "2-6 months depending on organization"
-      
+
     - id: 3
       name: "Published Material About You"
       uscis_description: "Published material in professional or major trade publications about you and your work"
       typical_timeline: "2-4 months to first feature"
-      
+
     - id: 4
       name: "Judging the Work of Others"
       uscis_description: "Participation as a judge of the work of others in your field"
       typical_timeline: "4-8 months (requires established reputation)"
-      
+
     - id: 5
       name: "Original Contributions"
       uscis_description: "Original contributions of major significance to your field"
       typical_timeline: "Ongoing throughout program"
-      
+
     - id: 6
       name: "Scholarly Articles"
       uscis_description: "Authorship of scholarly articles in professional journals or major media"
       typical_timeline: "Articles begin month 1"
-      
+
     - id: 7
       name: "Critical or Essential Role"
       uscis_description: "Employment in critical or essential capacity for distinguished organizations"
       typical_timeline: "Ongoing throughout program"
-      
+
     - id: 8
       name: "High Salary or Remuneration"
       uscis_description: "Evidence of commanding high salary relative to others in field"
@@ -532,27 +532,27 @@ agent_based_benefits:
     - benefit: "No lottery"
       h1b: "14% selection rate (lottery)"
       o1_agent: "100% merit-based approval"
-      
+
     - benefit: "Salary minimum"
       h1b: "$100,000 minimum"
       o1_agent: "No minimum salary restrictions"
-      
+
     - benefit: "Employer flexibility"
       h1b: "Tied to single employer"
       o1_agent: "Work for unlimited employers simultaneously"
-      
+
     - benefit: "Business ownership"
       h1b: "Cannot start business"
       o1_agent: "Full entrepreneurship allowed"
-      
+
     - benefit: "Start timing"
       h1b: "October start only"
       o1_agent: "Begin anytime year-round"
-      
+
     - benefit: "Duration"
       h1b: "6-year maximum"
       o1_agent: "Unlimited renewals in 3-year increments"
-      
+
   key_freedoms:
     - "Work for multiple employers simultaneously"
     - "Switch companies without visa refiling"
@@ -572,7 +572,7 @@ disclaimers:
     - "Past results do not guarantee future outcomes"
     - "Individual results may vary"
     - "No service can legally guarantee USCIS approval"
-    
+
   ethical_guidelines:
     - "Never guarantee visa approval"
     - "Never claim to practice law"
@@ -588,39 +588,39 @@ deprecated:
   terms:
     - old: "PRO tier"
       new: "Profile Builder"
-      
+
     - old: "ELITE tier"
       new: "Profile Builder Elite"
-      
+
     - old: "Accelerator Pro"
       new: "Profile Builder"
-      
+
     - old: "Accelerator Elite"
       new: "Profile Builder Elite OR Filing Accelerator (depending on context)"
-      
+
     - old: "$1,500/month for profile building"
       new: "$800/month (Profile Builder) or $1,400/month (Elite)"
-      
+
     - old: "$2,000/month for Elite with filing"
       new: "$1,400/month Elite (no filing) or $2,000/month Filing Accelerator (with filing)"
-      
+
     - old: "$10,000/6 months Elite"
       new: "$15,000 annual prepay (Profile Builder Elite)"
-      
+
     - old: "$15,000/8 months Elite"
       new: "$15,000 annual prepay (Profile Builder Elite)"
-      
+
     - old: "$10,000 Ready Filing"
       new: "$11,000 Ready Filing"
-      
+
     - old: "6-8 month program"
       new: "12-month program"
-      
+
     - old: "3-month minimum"
       new: "12-month program"
-      
+
     - old: "Refile fee $500-$1,000"
       new: "Refile fee $1,500"
-      
+
     - old: "Filing included in Elite tier"
       new: "Filing NOT included in Profile Builder Elite (only in Filing Accelerator)"
