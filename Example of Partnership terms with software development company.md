@@ -65,10 +65,12 @@ STAGE 4: NEXRIZEN INTEGRATION
 ## REVENUE STREAMS
 
 ### **For Innovative Automations:**
-1. **O-1 Filing Fees:** $11K-15K per candidate
-2. **Accelerator Program:** $1,500-2,000/month x 6-8 months
-3. **Employer Matching:** Success fees from placements
-4. **Certification Program:** Licensing/testing fees
+1. **Ready Filing:** $11,000-$15,000 per candidate (for those already qualified)
+2. **Filing Accelerator:** $2,000/month x 12 months ($20,000 annual prepay) - includes 2 filings
+3. **Profile Builder:** $800/month or **Profile Builder Elite:** $1,400/month (evidence building only, no filing)
+4. **Petitioner Only:** $2,000 (for clients with own attorney)
+5. **Employer Matching:** Success fees from placements
+6. **Certification Program:** Licensing/testing fees
 
 ### **For Nexrizen:**
 1. **Talent Access:** First look at top engineers

@@ -624,7 +624,7 @@ Formatting may be inconsistent from source
                 
                 <div class="option-card">
                     <div class="option-label">Option 2</div>
-                    <div class="option-price">$10,000</div>
+                    <div class="option-price">$11,000</div>
                     <p class="option-description">Complete O-1 Filing + Petitioner - Full-service from assessment to approval</p>
                     <a href="#option2" class="cta-button">Learn More</a>
                 </div>
@@ -712,7 +712,7 @@ Formatting may be inconsistent from source
     
     <section id="option2">
         <div class="container">
-            <h2>Option 2: Complete O-1 Filing + Petitioner - $10,000</h2>
+            <h2>Option 2: Complete O-1 Filing + Petitioner - $11,000</h2>
             
             <p style="font-size: 1.1rem; color: #1e3a8a; font-weight: 600;">Everything in Option 1 PLUS complete O-1 petition preparation</p>
             
@@ -743,7 +743,7 @@ Formatting may be inconsistent from source
                 <h4>Total Investment - Upfront Option</h4>
                 <div class="price-line">
                     <span>Innovative Automations Service</span>
-                    <span>$10,000</span>
+                    <span>$11,000</span>
                 </div>
                 <div class="price-line">
                     <span>USCIS Filing Fee (direct to USCIS)</span>
@@ -751,7 +751,7 @@ Formatting may be inconsistent from source
                 </div>
                 <div class="price-line">
                     <span>Total Base Investment</span>
-                    <span>$11,055</span>
+                    <span>$12,055</span>
                 </div>
             </div>
             
@@ -773,7 +773,7 @@ Formatting may be inconsistent from source
             
             <p style="color: #64748b; font-size: 0.9rem;"><strong>Payment Plan:</strong> $12,000 total, minimum $2,000/month. Must be paid in full before USCIS filing. Example: 6 monthly payments of $2,000, then we file your petition.</p>
             
-            <a href="#contact" class="cta-button">Complete O-1 Filing - $10,000</a>
+            <a href="#contact" class="cta-button">Complete O-1 Filing - $11,000</a>
         </div>
     </section>
     
@@ -951,7 +951,7 @@ Formatting may be inconsistent from source
                 <li><strong>Tech-Focused Understanding:</strong> We understand developer careers, GitHub metrics, and technical achievements</li>
                 <li><strong>500+ Successful Visa Cases:</strong> Extensive experience with agent-based O-1 petitions</li>
                 <li><strong>94% Approval Rate:</strong> Comprehensive preparation results in high approval rates</li>
-                <li><strong>Flexible Service Options:</strong> Choose just petitioner services ($2,000) or complete O-1 filing ($10,000)</li>
+                <li><strong>Flexible Service Options:</strong> Choose just petitioner services ($2,000) or complete O-1 filing ($11,000)</li>
                 <li><strong>Long-Term Partnership:</strong> We remain your agent-petitioner throughout validity and renewals</li>
                 <li><strong>Multiple Employer Expertise:</strong> We specialize in work itineraries enabling unlimited employer relationships</li>
                 <li><strong>Entrepreneurship Support:</strong> We structure petitions to allow business ownership from day one</li>
@@ -967,7 +967,7 @@ Formatting may be inconsistent from source
             
             <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 32px;">
                 <a href="#" class="cta-button cta-button-secondary">Petitioner Service - $2,000</a>
-                <a href="#" class="cta-button">Complete O-1 Filing - $10,000</a>
+                <a href="#" class="cta-button">Complete O-1 Filing - $11,000</a>
             </div>
             
             <p style="margin-top: 32px; font-size: 0.95rem;">
