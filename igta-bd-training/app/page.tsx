@@ -221,9 +221,13 @@ export default function Home() {
           <li className="pl-4">- <strong>talent@innovativeautomations.dev</strong></li>
           <li>• <strong>Government Filing Fees</strong> (paid separately by client):</li>
           <li className="pl-4">- I-129 Petition: <strong>$460</strong></li>
-          <li className="pl-4">- I-907 Premium Processing: <strong>$2,805</strong> (15 business day response)</li>
-          <li className="pl-4">- Total without premium: <strong>~$460</strong></li>
-          <li className="pl-4">- Total with premium: <strong>~$3,265</strong></li>
+          <li className="pl-4">- Asylum Program Fee (ACWIA):</li>
+          <li className="pl-8">• 25 or fewer employees: <strong>$600</strong></li>
+          <li className="pl-8">• 26+ employees: <strong>$1,500</strong></li>
+          <li className="pl-4">- I-907 Premium Processing: <strong>$2,805</strong> (optional - 15 business days)</li>
+          <li className="pl-4 mt-2"><strong>Totals:</strong></li>
+          <li className="pl-8">• Small company (≤25): <strong>$1,060</strong> (or <strong>$3,865</strong> with premium)</li>
+          <li className="pl-8">• Large company (26+): <strong>$1,960</strong> (or <strong>$4,765</strong> with premium)</li>
         </ul>
       </div>
     </div>
