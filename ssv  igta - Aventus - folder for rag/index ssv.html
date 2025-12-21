@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSV Lead Management System</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
+            color: #ffffff;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+        }
+
+        .tagline {
+            font-size: 28px;
+            font-weight: bold;
+            color: #00d4ff;
+            margin-bottom: 15px;
+            text-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+        }
+
+        .subtitle {
+            color: #b8c5d6;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .auth-section {
+            background: rgba(255, 215, 0, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 4px solid #ffd700;
+            margin-top: 20px;
+        }
+
+        .main-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+            border-color: rgba(0, 212, 255, 0.3);
+        }
+
+        .card h2 {
+            color: #00d4ff;
+            margin-bottom: 25px;
+            font-size: 22px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: #e0e6ed;
+            font-size: 14px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            color: #ffffff;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #00d4ff;
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        input::placeholder, textarea::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 150px;
+            font-family: inherit;
+        }
+
+        .btn {
+            background: linear-gradient(135deg, #00d4ff, #0099cc);
+            color: white;
+            padding: 15px 25px;
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-right: 15px;
+            margin-bottom: 15px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        .btn-secondary {
+            background: linear-gradient(135deg, #6c757d, #495057);
+        }
+
+        .btn-success {
+            background: linear-gradient(135deg, #28a745, #20c997);
+        }
+
+        .btn-danger {
+            background: linear-gradient(135deg, #dc3545, #e74c3c);
+        }
+
+        .btn-warning {
+            background: linear-gradient(135deg, #ffc107, #f39c12);
+            color: #000;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .pricing-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .pricing-card:hover {
+            border-color: #00d4ff;
+            background: rgba(0, 212, 255, 0.1);
+        }
+
+        .pricing-card.selected {
+            border-color: #28a745;
+            background: rgba(40, 167, 69, 0.2);
+        }
+
+        .pricing-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #00d4ff;
+        }
+
+        .pricing-amount {
+            font-size: 24px;
+            font-weight: bold;
+            color: #28a745;
+            margin-bottom: 5px;
+        }
+
+        .pricing-desc {
+            font-size: 12px;
+            color: #b8c5d6;
+        }
+
+        .analysis-section {
+            display: none;
+            background: rgba(40, 167, 69, 0.1);
+            border: 1px solid rgba(40, 167, 69, 0.3);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+
+        .analysis-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .analysis-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 12px;
+            border-left: 4px solid #00d4ff;
+        }
+
+        .analysis-label {
+            font-size: 12px;
+            color: #b8c5d6;
+            margin-bottom: 5px;
+        }
+
+        .analysis-value {
+            font-size: 16px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        .stage-indicator {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+
+        .stage-initial { background: #17a2b8; color: white; }
+        .stage-evaluation { background: #ffc107; color: #000; }
+        .stage-pricing { background: #dc3545; color: white; }
+        .stage-decision { background: #28a745; color: white; }
+
+        .output-section {
+            grid-column: 1 / -1;
+        }
+
+        .output-box {
+            background: rgba(0, 0, 0, 0.3);
+            color: #ffffff;
+            padding: 25px;
+            border-radius: 15px;
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 14px;
+            line-height: 1.6;
+            white-space: pre-wrap;
+            max-height: 400px;
+            overflow-y: auto;
+            margin-bottom: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .templates-section {
+            margin-top: 30px;
+        }
+
+        .template-tabs {
+            display: flex;
+            margin-bottom: 25px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 8px;
+        }
+
+        .tab-btn {
+            flex: 1;
+            padding: 15px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+            font-weight: 600;
+            color: #b8c5d6;
+            transition: all 0.3s ease;
+        }
+
+        .tab-btn.active {
+            background: linear-gradient(135deg, #00d4ff, #0099cc);
+            color: white;
+        }
+
+        .template-content {
+            display: none;
+        }
+
+        .template-content.active {
+            display: block;
+        }
+
+        .template-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+        }
+
+        .template-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .template-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            border-color: #00d4ff;
+        }
+
+        .template-title {
+            font-weight: bold;
+            color: #00d4ff;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .template-desc {
+            color: #b8c5d6;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .template-preview {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 12px;
+            color: #e0e6ed;
+            border-left: 3px solid #00d4ff;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+        }
+
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .spinner {
+            border: 4px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            border-top: 4px solid #00d4ff;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .status-indicator {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+
+        .status-connected { background: #28a745; }
+        .status-disconnected { background: #dc3545; }
+        .status-pending { background: #ffc107; }
+
+        .checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .checkbox-item input[type="checkbox"] {
+            width: auto;
+            height: 18px;
+            accent-color: #00d4ff;
+        }
+
+        .links-display {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            border-radius: 12px;
+            border-left: 4px solid #28a745;
+            margin-bottom: 20px;
+        }
+
+        .link-item {
+            display: flex;
+            justify-content: between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .link-item:last-child {
+            border-bottom: none;
+        }
+
+        .link-label {
+            font-weight: 600;
+            color: #00d4ff;
+            min-width: 120px;
+        }
+
+        .link-url {
+            font-family: monospace;
+            color: #28a745;
+            font-size: 13px;
+            word-break: break-all;
+        }
+
+        @media (max-width: 768px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .template-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .container {
+                padding: 10px;
+            }
+
+            .card {
+                padding: 20px;
+            }
+        }
+
+        .error-message {
+            background: rgba(220, 53, 69, 0.1);
+            border: 1px solid rgba(220, 53, 69, 0.3);
+            color: #ff6b6b;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            display: none;
+        }
+
+        .success-message {
+            background: rgba(40, 167, 69, 0.1);
+            border: 1px solid rgba(40, 167, 69, 0.3);
+            color: #51cf66;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            display: none;
+        }
+
+        .warning-box {
+            background: rgba(255, 193, 7, 0.1);
+            border: 1px solid rgba(255, 193, 7, 0.3);
+            color: #ffd43b;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="tagline">We solve problems for the best athletes, coaches, and organizations in the world</div>
+            <div class="subtitle">SSV Lead Management & Email Response System</div>
+            
+            <!-- Authentication Status -->
+            <div class="auth-section">
+                <div style="display: flex; align-items: center; justify-content: center; gap: 20px;">
+                    <div>
+                        <span class="status-indicator status-pending" id="gmailStatus"></span>
+                        <span>Gmail: <span id="gmailStatusText">Not Connected</span></span>
+                    </div>
+                    <div>
+                        <span class="status-indicator status-pending" id="sheetsStatus"></span>
+                        <span>Sheets: <span id="sheetsStatusText">Not Connected</span></span>
+                    </div>
+                    <div>
+                        <span class="status-indicator status-connected" id="aiStatus"></span>
+                        <span>AI Services: <span id="aiStatusText">Ready</span></span>
+                    </div>
+                </div>
+                <button class="btn btn-warning" onclick="initializeGoogleAuth()" style="margin-top: 15px;">
+                    <i class="fas fa-sign-in-alt"></i> Connect Google Services
+                </button>
+            </div>
+        </div>
+
+        <!-- Error/Success Messages -->
+        <div id="errorMessage" class="error-message"></div>
+        <div id="successMessage" class="success-message"></div>
+
+        <!-- Main Content Grid -->
+        <div class="main-grid">
+            <!-- Lead Analysis Section -->
+            <div class="card">
+                <h2><i class="fas fa-user-analytics"></i> Lead Analysis & Context</h2>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="leadName">Lead Name</label>
+                        <input type="text" id="leadName" placeholder="Enter lead's full name">
+                    </div>
+                    <div class="form-group">
+                        <label for="leadEmail">Lead Email</label>
+                        <input type="email" id="leadEmail" placeholder="Enter lead's email address">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="transcript">Conversation Transcript / Notes</label>
+                    <textarea id="transcript" placeholder="Paste conversation transcript, call notes, or any context about this lead..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="additionalContext">Additional Context (Optional)</label>
+                    <textarea id="additionalContext" placeholder="Sport/field, country of origin, timeline urgency, competition dates, etc."></textarea>
+                </div>
+
+                <button class="btn" onclick="analyzeTranscript()">
+                    <i class="fas fa-search"></i> Analyze Lead
+                </button>
+                <button class="btn btn-secondary" onclick="searchGmailContext()">
+                    <i class="fas fa-envelope-open-text"></i> Search Gmail History
+                </button>
+                <button class="btn btn-success" onclick="searchGoogleDocs()">
+                    <i class="fas fa-file-alt"></i> Find Evaluation Docs
+                </button>
+
+                <!-- Analysis Results -->
+                <div id="analysisResults" class="analysis-section">
+                    <h3><i class="fas fa-chart-line"></i> Analysis Results</h3>
+                    <div id="analysisContent" class="analysis-grid"></div>
+                </div>
+            </div>
+
+            <!-- Pricing & Links Generator -->
+            <div class="card">
+                <h2><i class="fas fa-calculator"></i> Pricing & Link Generator</h2>
+                
+                <div class="form-group">
+                    <label for="visaType">Visa Type</label>
+                    <select id="visaType" onchange="updatePricing()">
+                        <option value="">Select Visa Type</option>
+                        <option value="P-1">P-1 Visa (Athletes with specific competition)</option>
+                        <option value="O-1">O-1 Visa (Extraordinary ability)</option>
+                        <option value="EB-1A">EB-1A Visa (Permanent residence)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Special Circumstances</label>
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="frmClient" onchange="updatePricing()">
+                            <label for="frmClient">First Round Management Client</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="needsPetitioner" onchange="updatePricing()">
+                            <label for="needsPetitioner">Needs Petitioner Service (+$2,000)</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="groupApplication" onchange="updatePricing()">
+                            <label for="groupApplication">Group Application</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group" id="groupSizeSection" style="display: none;">
+                    <label for="groupSize">Number of Additional Members</label>
+                    <input type="number" id="groupSize" min="1" max="20" value="1" onchange="updatePricing()">
+                </div>
+
+                <div class="pricing-grid" id="pricingOptions"></div>
+
+                <!-- Generated Links Display -->
+                <div id="generatedLinks" class="links-display" style="display: none;">
+                    <h4><i class="fas fa-link"></i> Generated Links</h4>
+                    <div id="linksContent"></div>
+                </div>
+
+                <button class="btn btn-success" onclick="generateAllLinks()">
+                    <i class="fas fa-magic"></i> Generate All Links
+                </button>
+                <button class="btn btn-secondary" onclick="copyLinksToClipboard()">
+                    <i class="fas fa-copy"></i> Copy Links
+                </button>
+            </div>
+        </div>
+
+        <!-- Email Generator Section -->
+        <div class="card output-section">
+            <h2><i class="fas fa-envelope"></i> AI Email Response Generator</h2>
+            
+            <div class="warning-box">
+                <i class="fas fa-exclamation-triangle"></i> 
+                <strong>Quality Guarantee:</strong> All URLs will use "sherrod" not "shared" - automatically validated and corrected!
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="emailTone">Email Tone</label>
+                    <select id="emailTone">
+                        <option value="professional">Professional</option>
+                        <option value="friendly">Friendly</option>
+                        <option value="urgent">Urgent</option>
+                        <option value="follow-up">Follow-up</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="emailPurpose">Email Purpose</label>
+                    <select id="emailPurpose">
+                        <option value="initial">Initial Contact</option>
+                        <option value="follow-up">Follow-up</option>
+                        <option value="pricing">Send Pricing</option>
+                        <option value="closing">Closing/Decision</option>
+                        <option value="not-qualified">Not Qualified Yet</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="emailPersonalization">Additional Instructions & Context</label>
+                <textarea id="emailPersonalization" placeholder="Any specific instructions for the email, urgency factors, timeline, special offers, etc."></textarea>
+            </div>
+
+            <button class="btn" onclick="generateEmailResponse()">
+                <i class="fas fa-robot"></i> Generate Email Response
+            </button>
+            <button class="btn btn-secondary" onclick="generateWhatsAppResponse()">
+                <i class="fas fa-mobile-alt"></i> Generate WhatsApp Version
+            </button>
+            <button class="btn btn-warning" onclick="validateAllUrls()">
+                <i class="fas fa-shield-alt"></i> Validate URLs
+            </button>
+
+            <!-- Loading Indicator -->
+            <div class="loading" id="loadingIndicator">
+                <div class="spinner"></div>
+                <p>Generating personalized response with AI...</p>
+            </div>
+
+            <!-- Email Output -->
+            <div id="emailOutput" style="display:none;">
+                <h3><i class="fas fa-paper-plane"></i> Generated Email</h3>
+                <div class="form-group">
+                    <label>Subject Line:</label>
+                    <div id="emailSubject" class="output-box"></div>
+                </div>
+                <div class="form-group">
+                    <label>Email Body:</label>
+                    <div id="emailBody" class="output-box"></div>
+                </div>
+                <button class="btn btn-success" onclick="copyEmailToClipboard()">
+                    <i class="fas fa-clipboard"></i> Copy Complete Email
+                </button>
+                <button class="btn btn-secondary" onclick="saveAsDraft()">
+                    <i class="fas fa-save"></i> Save as Gmail Draft
+                </button>
+            </div>
+
+            <!-- WhatsApp Output -->
+            <div id="whatsappOutput" style="display:none;">
+                <h3><i class="fas fa-whatsapp"></i> WhatsApp Version</h3>
+                <div id="whatsappBody" class="output-box"></div>
+                <button class="btn btn-success" onclick="copyWhatsAppToClipboard()">
+                    <i class="fas fa-clipboard"></i> Copy WhatsApp Message
+                </button>
+            </div>
+        </div>
+
+        <!-- Templates Library -->
+        <div class="templates-section">
+            <div class="card">
+                <h2><i class="fas fa-library"></i> Email Templates Library</h2>
+                
+                <div class="template-tabs">
+                    <button class="tab-btn active" onclick="showTemplateTab('initial')">
+                        <i class="fas fa-handshake"></i> Initial Contact
+                    </button>
+                    <button class="tab-btn" onclick="showTemplateTab('followup')">
+                        <i class="fas fa-reply"></i> Follow-Up
+                    </button>
+                    <button class="tab-btn" onclick="showTemplateTab('pricing')">
+                        <i class="fas fa-dollar-sign"></i> Pricing
+                    </button>
+                    <button class="tab-btn" onclick="showTemplateTab('special')">
+                        <i class="fas fa-star"></i> Special Cases
+                    </button>
+                </div>
+
+                <div id="initialTab" class="template-content active">
+                    <div class="template-grid">
+                        <div class="template-card" onclick="useTemplate('selfEvaluation')">
+                            <div class="template-title">Self Evaluation Request</div>
+                            <div class="template-desc">First contact requesting intake form completion</div>
+                            <div class="template-preview">Hi [Name], Thank you for reaching out to Sherrod Sports Visas regarding your interest in an O or P visa. To move forward, please complete our Self Evaluation Intake Form...</div>
+                        </div>
+                        <div class="template-card" onclick="useTemplate('welcome')">
+                            <div class="template-title">Welcome & Next Steps</div>
+                            <div class="template-desc">Welcoming new qualified leads with clear next steps</div>
+                            <div class="template-preview">Welcome to Sherrod Sports Visas! We're excited to support your journey toward securing your visa. Let's begin your process...</div>
+                        </div>
+                        <div class="template-card" onclick="useTemplate('consultation')">
+                            <div class="template-title">Schedule Consultation</div>
+                            <div class="template-desc">Inviting leads to book a consultation call</div>
+                            <div class="template-preview">Hi [Name], Thank you for contacting Sherrod Sports Visas. We'd love to speak with you directly to better understand your goals and guide you through the process...</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="followupTab" class="template-content">
+                    <div class="template-grid">
+                        <div class="template-card" onclick="useTemplate('checkingIn')">
+                            <div class="template-title">Checking In</div>
+                            <div class="template-desc">Professional follow-up after initial contact</div>
+                            <div class="template-preview">Hi [Name], I hope you're doing well! I wanted to follow up on our recent conversation regarding your visa case...</div>
+                        </div>
+                        <div class="template-card" onclick="useTemplate('urgency')">
+                            <div class="template-title">Time-Sensitive Follow-Up</div>
+                            <div class="template-desc">Creating urgency for time-sensitive opportunities</div>
+                            <div class="template-preview">Time-Sensitive: Your visa opportunity with current favorable processing times...</div>
+                        </div>
+                        <div class="template-card" onclick="useTemplate('secondFollowup')">
+                            <div class="template-title">Second Follow-Up</div>
+                            <div class="template-desc">Following up when no initial response</div>
+                            <div class="template-preview">Hi [Name], I wanted to reach out one more time regarding your visa needs. If timing isn't right now, no worries...</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="pricingTab" class="template-content">
+                    <div class="template-grid">
+                        <div class="template-card" onclick="useTemplate('p1Standard')">
+                            <div class="template-title">P-1 Standard Pricing</div>
+                            <div class="template-desc">P-1 visa at $6,000 for regular clients</div>
+                            <div class="template-preview">Based on our assessment, you're a strong candidate for the P-1 visa. Your investment: $6,000...</div>
+                        </div>
+                        <div class="template-card" onclick="useTemplate('o1Standard')">
+                            <div class="template-title">O-1 Standard Pricing</div>
+                            <div class="template-desc">O-1 visa at $8,000 for extraordinary ability</div>
+                            <div class="template-preview">You're an excellent candidate for the O-1 visa based on your extraordinary achievements. Investment: $8,000...</div>
+                        </div>
+                        <div class="template-card" onclick="useTemplate('eb1aStandard')">
+                            <div class="template-title">EB-1A Pricing</div>
+                            <div class="template-desc">EB-1A visa at $8,000 for permanent residence</div>
+                            <div class="template-preview">For permanent residence through the EB-1A category, your investment: $8,000...</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="specialTab" class="template-content">
+                    <div class="template-grid">
+                        <div class="template-card" onclick="useTemplate('frmSpecial')">
+                            <div class="template-title">FRM Special Pricing</div>
+                            <div class="template-desc">First Round Management clients get special rates</div>
+                            <div class="template-preview">As a First Round Management client, you receive our special pricing: P-1 visa at $4,000 (regularly $6,000)...</div>
+                        </div>
+                        <div class="template-card" onclick="useTemplate('notQualified')">
+                            <div class="template-title">Not Qualified Yet</div>
+                            <div class="template-desc">For leads who need more profile development</div>
+                            <div class="template-preview">After reviewing your current profile, you're not quite at the level where we can proceed with a visa petition at this time...</div>
+                        </div>
+                        <div class="template-card" onclick="useTemplate('multipleAthletes')">
+                            <div class="template-title">Multiple Athletes/Group</div>
+                            <div class="template-desc">Handling multiple people in one application</div>
+                            <div class="template-preview">For your group application: Base P-1: $6,000, each additional member: $1,000...</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
